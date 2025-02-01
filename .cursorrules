@@ -1,0 +1,97 @@
+# Developer Guidelines
+
+## Project Structure
+```
+├── app/                  # Next.js application routes and pages
+├── blocks/              # Reusable block components
+├── components/          # React components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions and shared code
+├── public/             # Static assets
+```
+
+## Technology Stack
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Drizzle ORM
+- Biome (for code formatting)
+- ESLint
+
+## Code Style Guidelines
+
+### TypeScript
+- Use TypeScript for all new code
+- Follow strict type checking (as per tsconfig.json)
+- Use interface for object type definitions
+- Use type for union types and simple type aliases
+
+### Components
+- Use functional components with hooks
+- Place components in appropriate directories:
+  - `components/` for shared UI components
+  - `blocks/` for larger composite components
+  - `app/` for page-specific components
+- Follow naming convention: PascalCase for component files and functions
+
+### CSS/Styling
+- Use Tailwind CSS for styling
+- Follow the project's tailwind configuration
+- Use utility classes when possible
+- Create custom classes in tailwind.config.ts when needed
+
+### State Management
+- Use React hooks for local state
+- Follow the custom hooks pattern in `hooks/` directory
+- Keep state as close to where it's used as possible
+
+### API and Data Handling
+- Use Next.js API routes for backend functionality
+- Follow RESTful principles
+- Use Drizzle ORM for database operations
+- Handle errors appropriately and provide meaningful error messages
+
+### Git Workflow
+- Write clear, descriptive commit messages
+- Follow conventional commits format:
+  - feat: new feature
+  - fix: bug fix
+  - docs: documentation changes
+  - style: formatting, missing semi colons, etc
+  - refactor: code change that neither fixes a bug nor adds a feature
+  - test: adding tests
+  - chore: updating build tasks, package manager configs, etc.
+- Create feature branches from main
+- Keep pull requests focused and concise
+
+### Testing
+- Write tests for new features
+- Update tests when modifying existing features
+- Follow the testing patterns established in the codebase
+
+### Documentation
+- Document complex functions and components
+- Keep README.md updated with new features and changes
+- Include JSDoc comments for public APIs and interfaces
+
+### Environment Variables
+- Never commit sensitive information
+- Use .env.example as a template
+- Document new environment variables in .env.example
+
+### Performance
+- Follow Next.js best practices for performance
+- Optimize images and assets
+- Use appropriate loading strategies for data fetching
+
+## Pull Request Process
+1. Follow the pull request template
+2. Ensure all tests pass
+3. Update documentation as needed
+4. Request review from appropriate team members
+5. Address review comments promptly
+
+## Deployment
+- All commits to main branch trigger Vercel deployment
+- Preview deployments are created for pull requests
+- Verify your changes in preview deployment before merging 
