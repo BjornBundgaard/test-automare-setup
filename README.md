@@ -59,3 +59,13 @@ pnpm dev
 ```
 
 Your app template should now be running on [localhost:3000](http://localhost:3000/).
+
+# AI Chatbot
+
+A full-featured AI chatbot built with the Next.js App Router, Vercel AI SDK, OpenAI, and Vercel KV.
+
+## Deployment
+
+This project is automatically deployed to Vercel. Every push to the main branch triggers a new deployment.
+
+Production URL: https://automate-setup-m47py8hop-alubuarts-projects.vercel.app
